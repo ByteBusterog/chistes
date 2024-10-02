@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chistes Byte Buster</title>
+    <script src="js/registraServiceWorker.js"></script>
+    <script src="js/chistes.js"></script>
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#fffbfe">
+    <link rel="icon" sizes="32x32" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="ungap/custom-elements.js"></script>
+    <script type="module" src="js/configura.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/transicion_completa.css">
+</head>
+
+<body>
+    <form>
+        <md-top-app-bar>
+            <h1>Select</h1>
+            <button is="md-menu-button" slot="navigation"></button>
+        </md-top-app-bar>
+
+        <main>
+            <p>
+                <span id="etiquetaGrupo" class="md-filled-text-field" accesskey="G">
+                    <md-select-menu name="grupo" required value=""
+                        aria-labelledby="etiquetaGrupo" options="opcionesDeGrupo"></md-select-menu>
+                    <span>Integrante *</span>
+                    <small>Obligatorio</small>
+                </span>
+            </p>
+
+            <p>
+                <button class="md-filled-button" style="width: 100%;">Enviar</button>
+            </p>
+            <p id="chiste-display"></p> <!-- Párrafo para mostrar el chiste -->
+        </main>
+
+        <md-options-menu id="opcionesDeGrupo" aria-label="Opciones de grupo">
+            <span data-value="" title="Selecciona opción"></span>
+            <span data-value="1">Joseph</span>
+            <span data-value="2">Enoc</span>
+            <span data-value="3">Dana</span>
+            <span data-value="4">German</span>
+            <span data-value="5">Palacios</span>
+        </md-options-menu>
+
+        <nav-drw></nav-drw>
+    </form>
+</body>
+
+</html>
